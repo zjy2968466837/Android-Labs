@@ -3,25 +3,27 @@
 build/
 !gradle/wrapper/gradle-wrapper.jar
 
-# ── 机器相关配置（不同电脑路径不同，不入库）──────────────
+# ── 机器相关配置（不同电脑路径不同，不入库；IDE 会自动生成）──
 local.properties
 
-# ── Android Studio / IntelliJ ─────────────────────────────
+# ── Android Studio / IntelliJ 工程配置 ────────────────────
+# 不入库：换机器后由 Android Studio 打开工程时自动重新生成，
+# 且其中可能残留本机的绝对路径，反而影响别人拉取后使用。
+.idea/
 *.iml
-.idea/workspace.xml
-.idea/caches/
-.idea/libraries/
-.idea/modules.xml
-.idea/navEditor.xml
-.idea/assetWizardSettings.xml
-.idea/shelf/
-.idea/tasks.xml
-.idea/usage.statistics.xml
 
 # ── 构建产物 ──────────────────────────────────────────────
 /captures
 .externalNativeBuild
 .cxx
+
+# ── 实验报告等文档（作为附件单独提交，不进代码仓库）───────
+*.docx
+*.doc
+
+# ── 各实验的报告配图与运行/代码截图（本地留存供写报告用）──
+# 与能否编译运行无关，故不入仓库
+Lab*/docs/
 
 # ── 工具产生的本地状态，与作业内容无关 ────────────────────
 .codebuddy/
