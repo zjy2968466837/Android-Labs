@@ -11,6 +11,21 @@
 每个 `LabN/` 都是一个独立的 Android Studio 工程，**`LabN` 本身即工程根**
 （即 `LabN/app/`、`LabN/build.gradle.kts`、`LabN/settings.gradle.kts`）。
 
+## 直接下载安装包
+
+不想自己编译的话，可从 Releases 下载对应实验的 APK 直接安装：
+
+| 实验 | 安装包 |
+|---|---|
+| 实验一　多语言版本 Hello World | [`Lab1-CourseDemo-1.0-debug.apk`](https://github.com/zjy2968466837/Android-Labs/releases/tag/Lab1) |
+
+```bash
+adb install -r Lab1-CourseDemo-1.0-debug.apk
+adb shell am start -n cn.edu.sicnu.cs.zjy.coursedemo/.MainActivity
+```
+
+后续每个实验会以同名标签（`Lab2`、`Lab3`…）发布对应的 APK。
+
 ## 环境要求
 
 | 项 | 要求 |
