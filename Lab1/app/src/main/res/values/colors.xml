@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ── 日间配色（默认）──
+         系统处于深色主题时，Android 会自动改用 values-night/colors.xml 里的同名颜色，
+         界面无需额外代码即可跟随系统切换。 -->
+    <!-- 页面背景 -->
+    <color name="screen_background">#FFFFFFFF</color>
+    <!-- 正文文字（Hello world! / I am clicked!） -->
+    <color name="text_primary">#FF757575</color>
+    <!-- 顶部标题栏 -->
+    <color name="appbar_background">#FF6200EE</color>
+    <color name="appbar_foreground">#FFFFFFFF</color>
+</resources>

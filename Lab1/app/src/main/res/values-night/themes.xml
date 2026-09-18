@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 暗色模式下与 values/themes.xml 保持同一套主题定义。
+         日夜差异全部由 @color/... 在 values-night/colors.xml 中覆盖，故此处无需重复声明颜色。 -->
+    <style name="Base.Theme.CourseDemo" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.CourseDemo" parent="Base.Theme.CourseDemo" />
+</resources>

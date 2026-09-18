@@ -1,0 +1,7 @@
+<resources>
+    <!-- 俄语（俄罗斯）。国旗由 drawable-ru/flag.jpg 自动替换。 -->
+    <string name="region_name">Россия</string>
+    <string name="hello_world">Привет, мир!</string>
+    <string name="i_am_clicked">Меня нажали!</string>
+    <string name="click_me">Нажми меня</string>
+</resources>

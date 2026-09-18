@@ -1,0 +1,7 @@
+<resources>
+    <!-- 中文（中国）。国旗由 drawable-zh/flag.jpg 自动替换。 -->
+    <string name="region_name">中国</string>
+    <string name="hello_world">你好，世界！</string>
+    <string name="i_am_clicked">我被点击了！</string>
+    <string name="click_me">点击我</string>
+</resources>

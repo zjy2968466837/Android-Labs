@@ -1,0 +1,11 @@
+<resources>
+    <!-- 应用名固定为「姓名+学号」，不随语言变化，也不参与翻译 -->
+    <string name="app_name" translatable="false">朱俊宇2023080544</string>
+
+    <!-- 以下为默认语言（英文 / 美国）文案。
+         系统语言为中文时取 values-zh，为俄语时取 values-ru，其余一律回退到这里。 -->
+    <string name="region_name">America</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="i_am_clicked">I am clicked!</string>
+    <string name="click_me">CLICK ME</string>
+</resources>

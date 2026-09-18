@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── 暗色模式配色 ──
+         仅在系统深色主题生效时被选用，与 values/colors.xml 一一对应。 -->
+    <color name="screen_background">#FF121212</color>
+    <color name="text_primary">#FFBDBDBD</color>
+    <color name="appbar_background">#FF3700B3</color>
+    <color name="appbar_foreground">#FFFFFFFF</color>
+</resources>
