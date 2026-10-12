@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 顶部应用栏（取色自参考界面：深紫 #3700B3） -->
+    <color name="appbar_background">#FF3700B3</color>
+    <color name="appbar_foreground">#FFFFFFFF</color>
+
+    <!-- 功能区 1：按钮区（白） + 滚动列表（青，参考界面 #03DAC5） -->
+    <color name="section_add_background">#FFFFFFFF</color>
+    <color name="list_background">#FF03DAC5</color>
+
+    <!-- 功能区 2：绿色底（参考界面 #00FF00） -->
+    <color name="section_mvc_background">#FF00FF00</color>
+
+    <!-- 按钮：参考界面为浅灰圆角矩形 + 黑字（旧式 Button 外观） -->
+    <color name="button_background">#FFD6D7D7</color>
+    <color name="button_text">#FF000000</color>
+
+    <!-- 正文文字 -->
+    <color name="text_primary">#FF000000</color>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <!-- 应用名（桌面图标名 + 应用栏标题）：提交要求为自己的「姓名+学号」 -->
+    <string name="app_name" translatable="false">朱俊宇2023080544</string>
+
+    <!-- ── 功能区 1：动态添加 TextView ── -->
+    <string name="btn_add_message">ADD TEXTVIEW</string>
+    <!-- 动态生成条目的文案模板，%1$d 为序号 -->
+    <string name="message_format">This is a new textView:%1$d</string>
+
+    <!-- ── 功能区 2：MVC ProgramExpert ── -->
+    <string name="btn_confirm">确定</string>
+    <!-- 下拉框选项：与 Model 层 ProgramExpert.languageOf 的下标一一对应
+         0 快速 -> C   1 容易 -> Python   2 新语言 -> Kotlin   3 面向对象 -> Java -->
+    <string-array name="features">
+        <item>快速</item>
+        <item>容易</item>
+        <item>新语言</item>
+        <item>面向对象</item>
+    </string-array>
+
+    <!-- Model 层返回的语言描述（禁止硬编码，故统一放在字符串资源里） -->
+    <string name="language_c">你是C语言</string>
+    <string name="language_python">你是Python语言</string>
+    <string name="language_kotlin">你是Kotlin语言</string>
+    <string name="language_java">你是Java语言</string>
+    <string name="language_unknown">不知道是什么语言</string>
+</resources>

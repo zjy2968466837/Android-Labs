@@ -7,6 +7,7 @@
 | 目录 | 说明 |
 |---|---|
 | `Lab1/` | 实验一：多语言版本交互式 Hello World |
+| `Lab2/` | 实验二：UI 控件代码生成以及 MVC（Kotlin + ViewBinding + ProgramExpert） |
 
 每个 `LabN/` 都是一个独立的 Android Studio 工程，**`LabN` 本身即工程根**
 （即 `LabN/app/`、`LabN/build.gradle.kts`、`LabN/settings.gradle.kts`）。
@@ -38,7 +39,7 @@ adb shell am start -n cn.edu.sicnu.cs.zjy.coursedemo/.MainActivity
 
 ### 方式一：Android Studio
 
-1. `File → Open`，选中 **`Lab1`** 这一层目录（不要选仓库根目录）
+1. `File → Open`，选中对应的 **`LabN`** 这一层目录（不要选仓库根目录）
 2. 首次打开时 IDE 会自动生成 `local.properties` 并执行 Gradle Sync
 3. `Run → Run 'app'`
 

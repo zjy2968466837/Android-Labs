@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbar_background"
+    android:orientation="vertical">
+
+    <!-- 顶部应用栏：标题取 @string/app_name（姓名+学号），与根布局同为紫色，
+         edge-to-edge 下状态栏区域也呈紫色，与应用栏连成一片。 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/appbar_background"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/appbar_foreground" />
+
+    <!-- ===================== 功能区 1 =====================
+         交互后用代码动态添加 TextView；滚动显示用 ScrollView 嵌套 LinearLayout 实现。 -->
+    <LinearLayout
+        android:id="@+id/sectionAdd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/section_add_background"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAddMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/button_background"
+            android:text="@string/btn_add_message"
+            android:textColor="@color/button_text"
+            app:cornerRadius="4dp" />
+
+        <ScrollView
+            android:id="@+id/svMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/list_background">
+
+            <!-- 动态生成的 TextView 都追加到这个 LinearLayout 里 -->
+            <LinearLayout
+                android:id="@+id/llMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- ===================== 功能区 2 =====================
+         MVC 交互式 ProgramExpert：Spinner（View 层的输入） + 确定按钮 + 大字结果区。 -->
+    <LinearLayout
+        android:id="@+id/sectionMvc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/section_mvc_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Spinner
+            android:id="@+id/spinnerFeature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/features" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_background"
+            android:text="@string/btn_confirm"
+            android:textColor="@color/button_text"
+            app:cornerRadius="4dp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/text_primary"
+            android:textSize="40sp" />
+    </LinearLayout>
+</LinearLayout>
