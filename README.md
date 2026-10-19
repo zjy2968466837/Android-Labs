@@ -8,6 +8,7 @@
 |---|---|
 | `Lab1/` | 实验一：多语言版本交互式 Hello World |
 | `Lab2/` | 实验二：UI 控件代码生成以及 MVC（Kotlin + ViewBinding + ProgramExpert） |
+| `Lab3/` | 实验三：多 Activity（Intent 正向/反向传参、隐式 Intent 调相机拍照、StopWatch 跨旋转连续计时） |
 
 每个 `LabN/` 都是一个独立的 Android Studio 工程，**`LabN` 本身即工程根**
 （即 `LabN/app/`、`LabN/build.gradle.kts`、`LabN/settings.gradle.kts`）。

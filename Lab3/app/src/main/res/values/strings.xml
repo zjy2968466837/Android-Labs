@@ -1,0 +1,39 @@
+<resources>
+    <!-- 应用名（桌面图标名 + 应用栏标题）：提交要求为自己的「姓名+学号」 -->
+    <string name="app_name" translatable="false">朱俊宇2023080544</string>
+
+    <!-- ========== 主界面：4 个按钮，分别启动 4 个二级 Activity ========== -->
+
+    <!-- 按钮 ①：正向传参。输入框提示 + 按钮文字 -->
+    <string name="hint_forward_input">请输入要传给第一个二级 Activity 的内容</string>
+    <string name="btn_launch_forward">启动二级 Activity①·正向传参</string>
+
+    <!-- 按钮 ②：反向传参。该 TextView 用于显示二级 Activity 回传的结果 -->
+    <string name="reverse_result_default">（此处显示第二级 Activity 回传的结果）</string>
+    <string name="btn_launch_reverse">启动二级 Activity②·反向传参</string>
+
+    <!-- 按钮 ③：调用系统相机拍照 -->
+    <string name="btn_launch_camera">启动二级 Activity③·拍照</string>
+
+    <!-- 按钮 ④：StopWatch 秒表 -->
+    <string name="btn_launch_stopwatch">启动二级 Activity④·秒表</string>
+
+    <!-- ========== 二级 Activity ①：显示正向传参收到的内容 ========== -->
+    <string name="second_placeholder">未接收到参数</string>
+
+    <!-- ========== 二级 Activity ②：输入内容后回传 ========== -->
+    <string name="hint_reply_input">请输入要返回主界面的内容</string>
+    <string name="btn_confirm">确定</string>
+
+    <!-- ========== 二级 Activity ③：拍照 ========== -->
+    <string name="btn_take_photo">拍照</string>
+    <string name="toast_camera_permission_denied">未获得相机权限，无法拍照</string>
+    <string name="toast_no_camera_app">未找到可用的系统相机应用</string>
+
+    <!-- ========== 二级 Activity ④：StopWatch ========== -->
+    <!-- 计时显示模板：%1$02d 分 %2$02d 秒 %3$02d 百分秒 -->
+    <string name="stopwatch_time_format">%1$02d:%2$02d.%3$02d</string>
+    <string name="btn_stopwatch_start">开始</string>
+    <string name="btn_stopwatch_pause">暂停</string>
+    <string name="btn_stopwatch_reset">重置</string>
+</resources>

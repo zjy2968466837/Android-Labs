@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 相机不是必需硬件：声明 required="false"，没有摄像头的设备也能安装/运行 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- ① 隐式 Intent 调系统相机拍照需要 CAMERA 权限（参考附件《采用隐式Intent调用相机拍照功能》）。
+         注意：Android 6.0(M) 起，若声明了 CAMERA 但未在运行时获得授权，
+         发起 ACTION_IMAGE_CAPTURE 会抛 SecurityException，故代码里还需运行时动态申请。 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- ② Android 11(API 30) 起的“软件包可见性”限制：不声明下面的 <queries>，
+         resolveActivity() 会永远返回 null，导致找不到系统相机 App。 -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab3">
+
+        <!-- 主界面：应用入口（1 个 MainActivity + 4 个二级 Activity） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 二级 Activity ①：正向传参——显示从主界面接到的参数 -->
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+
+        <!-- 二级 Activity ②：反向传参——输入内容后回传主界面 -->
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="false" />
+
+        <!-- 二级 Activity ③：隐式 Intent 调用系统相机拍照 -->
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+
+        <!-- 二级 Activity ④：StopWatch 秒表（横竖屏切换时靠生命周期保存/恢复实现连续计时） -->
+        <activity
+            android:name=".StopWatchActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

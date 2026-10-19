@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 二级 Activity ④：StopWatch 秒表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbar_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/appbar_background"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/appbar_foreground" />
+
+    <LinearLayout
+        android:id="@+id/contentStopwatch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/screen_stopwatch_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 计时显示：文本在代码里用字符串资源 stopwatch_time_format 生成 -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_primary"
+            android:textSize="56sp"
+            tools:text="00:00.00" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStartPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_stopwatch_start"
+                android:textColor="@color/button_text"
+                app:cornerRadius="4dp" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_stopwatch_reset"
+                android:textColor="@color/button_text"
+                app:cornerRadius="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

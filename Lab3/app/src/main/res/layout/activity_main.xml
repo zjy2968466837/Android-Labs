@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbar_background"
+    android:orientation="vertical">
+
+    <!-- 顶部应用栏：标题取 @string/app_name（姓名+学号），与根布局同为紫色 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/appbar_background"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/appbar_foreground" />
+
+    <!-- 4 个按钮，分别启动 4 个二级 Activity -->
+    <ScrollView
+        android:id="@+id/contentMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ① 正向传参：先输入内容，再点按钮把它传给二级 Activity① -->
+            <EditText
+                android:id="@+id/etForwardInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_forward_input"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnLaunchForward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_launch_forward"
+                android:textColor="@color/button_text"
+                app:cornerRadius="4dp" />
+
+            <!-- ② 反向传参：二级 Activity② 输入后确定，结果回显到下面的 TextView -->
+            <Button
+                android:id="@+id/btnLaunchReverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_launch_reverse"
+                android:textColor="@color/button_text"
+                app:cornerRadius="4dp" />
+
+            <TextView
+                android:id="@+id/tvReverseResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/screen_reverse_background"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:text="@string/reverse_result_default"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <!-- ③ 隐式 Intent 调系统相机拍照 -->
+            <Button
+                android:id="@+id/btnLaunchCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_launch_camera"
+                android:textColor="@color/button_text"
+                app:cornerRadius="4dp" />
+
+            <!-- ④ StopWatch 秒表 -->
+            <Button
+                android:id="@+id/btnLaunchStopwatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_launch_stopwatch"
+                android:textColor="@color/button_text"
+                app:cornerRadius="4dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

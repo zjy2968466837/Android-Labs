@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 主题基类：Material3 的 DayNight 变体，浅色/深色由系统自动选择。
+         应用栏不使用系统自带的 ActionBar，各界面顶部的标题栏由布局里的 Toolbar 充当，
+         标题统一取 @string/app_name（姓名+学号）。
+
+         界面采用 edge-to-edge 绘制（Android 15 起 targetSdk 35+ 强制），
+         系统栏留白在各 Activity 的 WindowInsets 监听器里处理（见 UiInsets.kt）。 -->
+    <style name="Base.Theme.Lab3" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.Lab3" parent="Base.Theme.Lab3" />
+</resources>

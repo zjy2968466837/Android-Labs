@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 二级 Activity ③：隐式 Intent 拍照，最少需要 ImageView + Button -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbar_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/appbar_background"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/appbar_foreground" />
+
+    <LinearLayout
+        android:id="@+id/contentCamera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/screen_camera_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_take_photo"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/button_background"
+            android:text="@string/btn_take_photo"
+            android:textColor="@color/button_text"
+            app:cornerRadius="4dp" />
+    </LinearLayout>
+</LinearLayout>
