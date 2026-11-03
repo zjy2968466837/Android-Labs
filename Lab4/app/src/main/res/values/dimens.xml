@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 牌阵里每张牌四周的外边距 -->
+    <dimen name="card_margin">4dp</dimen>
+</resources>

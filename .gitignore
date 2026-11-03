@@ -35,6 +35,9 @@ Lab*/参考文档/
 
 # ── 工具产生的本地状态，与作业内容无关 ────────────────────
 .codebuddy/
+.playwright-mcp/
+# ZCode 项目级 MCP 配置（含本机 localhost 端口，不随仓库分发）
+.zcode/
 
 # ── 国旗素材的解压残留（真正用到的资源在 Lab1/app/src/main/res/ 下）──
 国旗/
