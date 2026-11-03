@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RecyclerView 的单个格子：一张牌。高度按横竖屏取自 dimens（竖屏 110dp / 横屏 76dp） -->
+<cn.edu.sicnu.cs.zjy.lab5.view.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height"
+    android:layout_margin="3dp" />

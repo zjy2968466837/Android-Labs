@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 二级 Activity②：翻牌游戏。牌面由 RecyclerView + CardAdapter 渲染（实验五） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbar_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/appbar_background"
+        app:title="@string/title_card_game"
+        app:titleTextColor="@color/appbar_foreground" />
+
+    <LinearLayout
+        android:id="@+id/contentGame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/screen_game_background"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 牌阵：列数与牌数都来自资源，横屏/竖屏各用一套（values-land） -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCards"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="2dp"
+            tools:itemCount="24"
+            tools:listitem="@layout/item_card" />
+
+        <!-- 底部：得分 + 重置 + 退出 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="得分：0" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnResetGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_reset_game"
+                android:textColor="@color/button_text"
+                android:textSize="14sp"
+                app:cornerRadius="4dp" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:backgroundTint="@color/button_background"
+                android:text="@string/btn_exit"
+                android:textColor="@color/button_text"
+                android:textSize="14sp"
+                app:cornerRadius="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

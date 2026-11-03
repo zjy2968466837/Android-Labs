@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 不需要任何权限：头像改用系统 Photo Picker 选择，无需读取存储或调用相机 -->
+
+    <application
+        android:name=".Lab5Application"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab5">
+
+        <!-- 主 Activity：显示玩家基本信息（1 个主 Activity + 2 个二级 Activity） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 二级 Activity①：修改个人信息 -->
+        <activity
+            android:name=".PersonInfoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 二级 Activity②：翻牌游戏 -->
+        <activity
+            android:name=".CardGameActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

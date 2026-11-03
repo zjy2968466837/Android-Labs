@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 横屏：6 列 × 3 行 = 18 张牌（横屏高度小，牌数比竖屏少，牌也变矮） -->
+    <integer name="card_count">18</integer>
+    <integer name="card_span_count">6</integer>
+</resources>

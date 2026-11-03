@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 竖屏牌高与字号（见 item_card.xml / view_card.xml），横屏用 values-land/dimens.xml -->
+    <dimen name="card_height">110dp</dimen>
+    <dimen name="card_rank_text">16sp</dimen>
+    <dimen name="card_suit_text">30sp</dimen>
+</resources>

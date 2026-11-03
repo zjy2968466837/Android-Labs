@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 横屏牌高：6 列 × 3 行要在一屏内放下，所以比竖屏矮，字号同步缩小 -->
+    <dimen name="card_height">60dp</dimen>
+    <dimen name="card_rank_text">13sp</dimen>
+    <dimen name="card_suit_text">20sp</dimen>
+</resources>

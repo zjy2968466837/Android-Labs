@@ -1,0 +1,71 @@
+<resources>
+    <!-- 应用名（桌面图标名）：提交要求为自己的「姓名+学号」 -->
+    <string name="app_name" translatable="false">朱俊宇2023080544</string>
+
+    <!-- ========== 界面标题（应用栏文字） ========== -->
+    <string name="title_edit_info">信息修改</string>
+    <string name="title_card_game">翻牌游戏</string>
+
+    <!-- ========== 主界面：玩家基本信息 ========== -->
+    <string name="desc_avatar">头像</string>
+    <string name="label_name">姓名：</string>
+    <string name="label_gender">性别：</string>
+    <string name="label_student_id">学号：</string>
+    <string name="label_phone">电话：</string>
+    <string name="label_email">邮件地址：</string>
+    <string name="label_hobby">爱好：</string>
+    <string name="label_high_score">游戏最高分：</string>
+    <!-- 最高分数字，%1$d 为分数 -->
+    <string name="high_score_value">%1$d</string>
+    <string name="value_not_set">未填写</string>
+    <string name="btn_edit_info">修改个人信息</string>
+    <string name="btn_play_game">翻牌游戏</string>
+
+    <!-- ========== 性别与爱好 ========== -->
+    <string name="gender_male">男</string>
+    <string name="gender_female">女</string>
+    <string name="hobby_travel">旅游</string>
+    <string name="hobby_reading">阅读</string>
+    <string name="hobby_game">游戏</string>
+    <string name="hobby_shopping">购物</string>
+    <string name="hobby_separator">、</string>
+
+    <!-- ========== 信息修改界面 ========== -->
+    <string name="desc_pick_avatar">选择头像</string>
+    <string name="hint_name">姓名</string>
+    <string name="hint_student_id">学号</string>
+    <string name="hint_phone">电话号码</string>
+    <string name="hint_email">电子邮件地址</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_cancel">取消</string>
+    <string name="toast_name_required">姓名不能为空</string>
+    <string name="toast_no_image_picker">未找到可用的图片选择器</string>
+
+    <!-- ========== 翻牌游戏界面 ========== -->
+    <!-- 得分模板：%1$d 为当前分数（可能为负） -->
+    <string name="score_format">得分：%1$d</string>
+    <string name="btn_reset_game">重置游戏</string>
+    <string name="btn_exit">退出</string>
+    <!-- 牌面背面中央的装饰符号 -->
+    <string name="card_back_mark" translatable="false">?</string>
+    <!-- 无障碍描述：%1$d 为从 1 开始的牌序号 -->
+    <string name="card_position_prefix">第%1$d张牌</string>
+    <string name="card_desc_back">第%1$d张牌，未翻开</string>
+    <!-- 无障碍描述：%2$s 为花色+点数，如“♥A” -->
+    <string name="card_desc_front">第%1$d张牌，%2$s</string>
+    <string name="card_desc_matched">第%1$d张牌，%2$s，已配对</string>
+
+    <!-- ========== 主界面菜单与“关于”对话框 ========== -->
+    <string name="menu_about">关于</string>
+    <string name="about_title">关于本应用</string>
+    <!-- 关于对话框正文：%1$s 姓名，%2$s 学号，%3$s 版本 -->
+    <string name="about_message">RecyclerView 翻牌游戏\n\n姓名：%1$s\n学号：%2$s\n版本：%3$s</string>
+    <string name="about_ok">确定</string>
+    <string name="app_version" translatable="false">1.0</string>
+
+    <!-- ========== 默认玩家资料（只存内存，不写文件） ========== -->
+    <string name="default_player_name" translatable="false">朱俊宇</string>
+    <string name="default_student_id" translatable="false">2023080544</string>
+    <string name="default_phone" translatable="false">13800138000</string>
+    <string name="default_email" translatable="false">zhujunyu@example.com</string>
+</resources>
