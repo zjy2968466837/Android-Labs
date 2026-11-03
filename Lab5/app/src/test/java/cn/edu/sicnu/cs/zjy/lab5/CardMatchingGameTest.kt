@@ -58,8 +58,8 @@ class CardMatchingGameTest {
         assertEquals("翻开两张只扣两次成本", -2, game.score)
 
         game.chooseCardAtIndex(third)
-        // -1 -1 + 同花 1×4 -1 = +1
-        assertEquals(1, game.score)
+        // -1 -1 + 同花 1×8 -1 = +5
+        assertEquals(5, game.score)
         assertTrue(game.cardAtIndex(first).isMatched)
         assertTrue(game.cardAtIndex(second).isMatched)
         assertTrue(game.cardAtIndex(third).isMatched)

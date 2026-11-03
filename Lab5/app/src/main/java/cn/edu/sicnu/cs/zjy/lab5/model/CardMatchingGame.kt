@@ -53,7 +53,8 @@ class CardMatchingGame(private val count: Int) {
     }
 
     val MISMATCH_PENALTY = 2
-    val MATCH_BONUS = 4
+    /** 三张牌奖励基数：同花 = 1×8，三条 = 4×8，与一次失配（3 次翻牌 + 2 分）大致对等 */
+    val MATCH_BONUS = 8
     val COST_TO_CHOOSE = 1
 
     fun chooseCardAtIndex(index: Int) {
